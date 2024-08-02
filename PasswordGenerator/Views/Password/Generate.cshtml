@@ -1,0 +1,16 @@
+﻿{
+    ["Title"] = "Generate Password";
+}
+
+<h2>Random Password Generator</h2>
+
+<form method="post" asp-action="Generate">
+    <label for="length">Desired Password Length:</label>
+    <input type="number" id="length" name="length" min="1" required>
+    <button type="submit">Generate</button>
+</form>
+
+@if (ViewBag.Password != null)
+{
+    <p>Your generated password:<strong> @ViewBag.Password</strong></p>
+}
